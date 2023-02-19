@@ -1,0 +1,793 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --bgc : #4289ff;
+    --text-color : #002d63;
+}
+.active{
+    background-color: #dde6ff;
+}
+/* body */
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+/* section/important-btns */
+.important-btn{
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--bgc) ;
+    padding: 30px 30px;
+    text-align: center;
+}
+.important-btn > button {
+    background: none;
+    border:2px solid #fff;
+    color: #fff;
+    padding: 10px 60px;
+    border-radius: 10px;
+
+}
+/* ***********************
+**************************
+************sudoku*************
+************************ */
+.inputs-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputs-parent {
+    display: grid;
+    grid-template-columns: repeat(9 , 5vw);
+    grid-template-rows: repeat(9 , 5vw);
+    justify-content: center;
+    align-content: center;
+    background: none;
+    box-shadow: 0px 5px 25px #428aff97;
+    border-radius: 10px;
+    position: fixed;
+
+}
+div{
+    background-color: rgb(255, 255, 255);
+    color: var(--text-color);
+    border: 1px solid var(--bgc);
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div:nth-child(1){
+    border-top-left-radius: 10px;
+}
+div:nth-child(9){
+    border-top-right-radius: 10px;
+}
+div:nth-child(81){
+    border-bottom-right-radius: 10px;
+}
+div:nth-child(73){
+    border-bottom-left-radius: 10px;
+}
+
+
+div:nth-child(3){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+}
+div:nth-child(6){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+}
+div:nth-child(12){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+}
+div:nth-child(15){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+}
+div:nth-child(21){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+}
+div:nth-child(24){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+}
+
+div:nth-child(28){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+}
+div:nth-child(29){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+}
+div:nth-child(30){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+}
+div:nth-child(31){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+}
+div:nth-child(32){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+}
+div:nth-child(33){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+}
+div:nth-child(34){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+}
+div:nth-child(35){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+}
+div:nth-child(36){
+    /* border-top-style: solid; */
+   margin-top: 2px;
+}
+
+div:nth-child(30){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+}
+div:nth-child(33){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+}
+div:nth-child(39){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+}
+div:nth-child(42){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+
+}
+div:nth-child(48){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+
+}
+div:nth-child(51){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+
+}
+
+div:nth-child(55){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+
+}
+div:nth-child(56){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+
+}
+div:nth-child(57){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+
+}
+div:nth-child(58){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+
+}
+div:nth-child(59){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+
+}
+div:nth-child(60){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+
+}
+div:nth-child(61){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+
+}
+div:nth-child(62){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+
+}
+div:nth-child(63){
+    /* border-top-style: solid; */
+    margin-top: 2px;
+
+}
+
+div:nth-child(57){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+
+}
+div:nth-child(60){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+
+}
+div:nth-child(66){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+
+}
+div:nth-child(69){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+
+}
+div:nth-child(75){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+
+}
+div:nth-child(78){
+    /* border-right-style: solid; */
+    margin-right: 2px;
+
+}
+
+/* *********************
+************************
+*********buttons-tools**********
+************************
+************************ */
+.offer-button{
+    background-color: rgb(255, 255, 255);
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.offer-btn{
+    background-color: #fff;
+    border: 1px solid #4289ff;
+    color: #002d63;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 0px 8px;
+}
+#pen{
+    color: #fff;
+    background-color: #4289ff;
+}
+
+
+
+
+
+/* responsive */
+/* screen */
+@media screen and (max-width : 1920px) {
+    .important-btn{
+        width: 100vw;
+        height: 35vh;
+        background-color: var(--bgc) ;
+        padding: 25px 10px;
+        text-align: center;
+    }
+    .important-btn > button {
+        background: none;
+        border:2px solid #fff;
+        color: #fff;
+        padding: 10px 100px;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    /* ***********************
+    **************************
+    ************sudoku*************
+    ************************ */
+    .inputs-area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inputs-parent {
+        display: grid;
+        grid-template-columns: repeat(9 , 4vw);
+        grid-template-rows: repeat(9 , 4vw);
+        justify-content: center;
+        align-content: center;
+        background: none;
+        box-shadow: 0px 5px 25px #428aff97;
+        border-radius: 10px;
+        position: fixed;
+        top: 150px;
+        background-color: var(--bgc);
+    }
+    div{
+        background-color: rgb(255, 255, 255);
+        color: var(--text-color);
+        border: 1px solid var(--bgc);
+        cursor: pointer;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+    } 
+    /* *********************
+    ************************
+    *********buttons-tools**********
+    ************************
+    ************************ */
+    .offer-button{
+        color: var(--text-color);
+        background: none;
+        font-size: 1.1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        bottom: 180px;
+        
+    
+    }
+    .offer-btn{
+        background-color: #fff;
+        border: 1px solid #4289ff;
+        color: #002d63;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        padding: 10px 15px;
+        margin: 8px 8px;
+        cursor: pointer;
+
+    }
+    #pen{
+        color: #fff;
+        background-color: #4289ff;
+        border: 2px solid #fff;
+    }
+}
+@media screen and (max-width : 1080px) {
+    .important-btn{
+        width: 100vw;
+        height: 35vh;
+        background-color: var(--bgc) ;
+        padding: 25px 10px;
+        text-align: center;
+    }
+    .important-btn > button {
+        background: none;
+        border:2px solid #fff;
+        color: #fff;
+        padding: 10px 70px;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    /* ***********************
+    **************************
+    ************sudoku*************
+    ************************ */
+    .inputs-area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inputs-parent {
+        display: grid;
+        grid-template-columns: repeat(9 , 5vw);
+        grid-template-rows: repeat(9 , 5vw);
+        justify-content: center;
+        align-content: center;
+        background: none;
+        box-shadow: 0px 5px 25px #428aff97;
+        border-radius: 10px;
+        position: fixed;
+        top: 150px;
+        background-color: var(--bgc);
+    }
+    div{
+        background-color: rgb(255, 255, 255);
+        color: var(--text-color);
+        border: 1px solid var(--bgc);
+        cursor: pointer;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: bold;
+    } 
+    /* *********************
+    ************************
+    *********buttons-tools**********
+    ************************
+    ************************ */
+    .offer-button{
+        color: var(--text-color);
+        background: none;
+        font-size: 1.1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        bottom: 180px;
+        
+    
+    }
+    .offer-btn{
+        background-color: #fff;
+        border: 1px solid #4289ff;
+        color: #002d63;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        padding: 10px 15px;
+        margin: 8px 8px;
+        cursor: pointer;
+
+    }
+    #pen{
+        color: #fff;
+        background-color: #4289ff;
+        border: 2px solid #fff;
+    }
+}
+@media screen and (max-width : 850px) {
+    .important-btn{
+        width: 100vw;
+        height: 35vh;
+        background-color: var(--bgc) ;
+        padding: 25px 10px;
+        text-align: center;
+    }
+    .important-btn > button {
+        background: none;
+        border:2px solid #fff;
+        color: #fff;
+        padding: 10px 70px;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        cursor: pointer;
+    }
+    /* ***********************
+    **************************
+    ************sudoku*************
+    ************************ */
+    .inputs-area{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inputs-parent {
+        display: grid;
+        grid-template-columns: repeat(9 , 6vw);
+        grid-template-rows: repeat(9 , 6vw);
+        justify-content: center;
+        align-content: center;
+        background: none;
+        box-shadow: 0px 5px 25px #428aff97;
+        border-radius: 10px;
+        position: fixed;
+        top: 150px;
+        background-color: var(--bgc);
+    }
+    div{
+        background-color: rgb(255, 255, 255);
+        color: var(--text-color);
+        border: 1px solid var(--bgc);
+        cursor: pointer;
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: bold;
+
+    } 
+    /* *********************
+    ************************
+    *********buttons-tools**********
+    ************************
+    ************************ */
+    .offer-button{
+        color: var(--text-color);
+        background: none;
+        font-size: 1.1rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        bottom: 150px;
+        
+    
+    }
+    .offer-btn{
+        background-color: #fff;
+        border: 1px solid #4289ff;
+        color: #002d63;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        padding: 10px 15px;
+        margin: 8px 8px;
+        cursor: pointer;
+
+    }
+    #pen{
+        color: #fff;
+        background-color: #4289ff;
+        border: 2px solid #fff;
+    }
+}
+@media screen and (max-width : 600px){
+    /* section/important-btns */
+   .important-btn{
+       width: 100vw;
+       height: 35vh;
+       background-color: var(--bgc) ;
+       padding: 30px 10px;
+       text-align: center;
+   }
+   .important-btn > button {
+       background: none;
+       border:2px solid #fff;
+       color: #fff;
+       padding: 10px 40px;
+       border-radius: 10px;
+   }
+   /* ***********************
+   **************************
+   ************sudoku*************
+   ************************ */
+   .inputs-area{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .inputs-parent {
+       display: grid;
+       grid-template-columns: repeat(9 , 6vw);
+       grid-template-rows: repeat(9 , 6vw);
+       justify-content: center;
+       align-content: center;
+       background: none;
+       box-shadow: 0px 5px 25px #428aff97;
+       border-radius: 10px;
+       position: fixed;
+       top: 120px;
+       background-color: var(--bgc);
+
+   }
+   div{
+       background-color: rgb(255, 255, 255);
+       color: var(--text-color);
+       border: 1px solid var(--bgc);
+       cursor: pointer;
+       text-align: center;
+       font-size: 1.6rem;
+       font-weight: bold;
+   } 
+   /* *********************
+   ************************
+   *********buttons-tools**********
+   ************************
+   ************************ */
+   .offer-button{
+       color: var(--text-color);
+       cursor: pointer;
+       font-size: 1.1rem;
+   
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-wrap: wrap;
+   
+       position: fixed;
+       top: 450px;
+   
+   }
+   .offer-btn{
+       background-color: #fff;
+       border: 1px solid #4289ff;
+       color: #002d63;
+       font-size: 1.2rem;
+       border-radius: 10px;
+       padding: 10px 15px;
+       margin: 8px 8px;
+   }
+   #pen{
+       color: #fff;
+       background-color: #4289ff;
+   }
+   
+}
+@media screen and (max-width : 528px){
+    /* section/important-btns */
+   .important-btn{
+       width: 100vw;
+       height: 35vh;
+       background-color: var(--bgc) ;
+       padding: 30px 10px;
+       text-align: center;
+   }
+   .important-btn > button {
+       background: none;
+       border:2px solid #fff;
+       color: #fff;
+       padding: 10px 40px;
+       border-radius: 10px;
+   }
+   /* ***********************
+   **************************
+   ************sudoku*************
+   ************************ */
+   .inputs-area{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .inputs-parent {
+       display: grid;
+       grid-template-columns: repeat(9 , 7vw);
+       grid-template-rows: repeat(9 , 7vw);
+       justify-content: center;
+       align-content: center;
+       background: none;
+       box-shadow: 0px 5px 25px #428aff97;
+       border-radius: 10px;
+       position: fixed;
+       top: 120px;
+       background-color: var(--bgc);
+
+   }
+   div{
+       background-color: rgb(255, 255, 255);
+       color: var(--text-color);
+       border: 1px solid var(--bgc);
+       cursor: pointer;
+       text-align: center;
+       font-size: 1.6rem;
+       font-weight: bold;
+   } 
+   /* *********************
+   ************************
+   *********buttons-tools**********
+   ************************
+   ************************ */
+   .offer-button{
+       color: var(--text-color);
+       cursor: pointer;
+       font-size: 1.1rem;
+   
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       flex-wrap: wrap;
+   
+       position: fixed;
+       top: 450px;
+   
+   }
+   .offer-btn{
+       background-color: #fff;
+       border: 1px solid #4289ff;
+       color: #002d63;
+       font-size: 1.2rem;
+       border-radius: 10px;
+       padding: 10px 15px;
+       margin: 8px 8px;
+   }
+   #pen{
+       color: #fff;
+       background-color: #4289ff;
+   }
+   
+}
+/* mobile */
+@media screen and (max-width : 400px){
+ /* section/important-btns */
+.important-btn{
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--bgc) ;
+    padding: 30px 10px;
+    text-align: center;
+}
+.important-btn > button {
+    background: none;
+    border:2px solid #fff;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+/* ***********************
+**************************
+************sudoku*************
+************************ */
+.inputs-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputs-parent {
+    display: grid;
+    grid-template-columns: repeat(9 , 9vw);
+    grid-template-rows: repeat(9 , 9vw);
+    justify-content: center;
+    align-content: center;
+    background: none;
+    box-shadow: 0px 5px 25px #428aff97;
+    border-radius: 10px;
+    position: fixed;
+    top: 120px;
+    background-color: var(--bgc);
+
+}
+div{
+    background-color: rgb(255, 255, 255);
+    color: var(--text-color);
+    border: 1px solid var(--bgc);
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+} 
+/* *********************
+************************
+*********buttons-tools**********
+************************
+************************ */
+.offer-button{
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    position: fixed;
+    top: 450px;
+
+}
+.offer-btn{
+    background-color: #fff;
+    border: 1px solid #4289ff;
+    color: #002d63;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 8px 8px;
+}
+#pen{
+    color: #fff;
+    background-color: #4289ff;
+}
+
+}
+
+
+
+
+
+
