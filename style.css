@@ -257,9 +257,7 @@ div:nth-child(78){
 .offer-button{
     background-color: rgb(255, 255, 255);
     color: var(--text-color);
-    cursor: pointer;
     font-size: 1.1rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -273,6 +271,7 @@ div:nth-child(78){
     border-radius: 10px;
     padding: 10px 15px;
     margin: 0px 8px;
+    cursor: pointer;
 }
 #pen{
     color: #fff;
